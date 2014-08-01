@@ -17,6 +17,9 @@ class PHPLaravelDBDataWrapper extends ArrayDBDataWrapper{
 			$temp = array();
 			foreach ($res as $obj)
 				$temp[]=$obj->getAttributes();
+		}else{
+		$temp = array();
+		$temp[] = array();
 		}
 		
 		return new ArrayQueryWrapper($temp);
@@ -40,7 +43,7 @@ class PHPLaravelDBDataWrapper extends ArrayDBDataWrapper{
 		$obj = $this->connection->find($data->get_id());
 		if ($obj->delete()){
 			$data->success();
-			$data->set_new_id($obj->id());
+			$data->set_new_id($obj->id);
 		} else {
 			$data->set_response_attribute("details", $this->errors_to_string($obj->getErrors()));
 			$data->invalid();
