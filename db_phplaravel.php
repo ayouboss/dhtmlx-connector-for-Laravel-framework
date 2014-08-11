@@ -35,8 +35,6 @@ class PHPLaravelDBDataWrapper extends ArrayDBDataWrapper{
 	public function insert($data,$source){
 		$name = get_class($this->connection);
 		$obj = new $name();
-		//echo $name;
-		//exit();
 		$this->fill_model_and_save($obj, $data);
 	}
 	public function delete($data,$source){
