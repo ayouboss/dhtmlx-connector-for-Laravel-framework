@@ -35,7 +35,7 @@ class DhtmlxConnectorController extends BaseController {
     }
     
 	/**
-	 * Returns all the blog posts.
+	 * Draws the scheduler.
 	 *
 	 * @return View
 	 */
@@ -43,7 +43,11 @@ class DhtmlxConnectorController extends BaseController {
 	{
 		return View::make('scheduler/index');
 	}
-	
+	/**
+	 * Loads all events.
+	 *
+	 * @return events
+	 */
 	public function load(){                                               
 
 		
@@ -52,7 +56,11 @@ class DhtmlxConnectorController extends BaseController {
         $connector->configure("events","id","start_date,end_date,event_name");
         $connector->render();                                                       
     }
-	
+	/**
+	 * Saves events.
+	 *
+	 * @return events
+	 */
 	public function save(){                                               
 														
         $connector = new SchedulerConnector($this->event, "PHPLaravel");               
