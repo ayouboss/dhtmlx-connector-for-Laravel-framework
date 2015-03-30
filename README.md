@@ -88,10 +88,11 @@ class Event extends Eloquent{
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<title>Basic initialization</title>
+	<link rel="stylesheet" href="codebase/dhtmlxscheduler_flat.css" type="text/css" media="screen" title="no title" charset="utf-8">
 </head>
 	<script src="codebase/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
 
-	<link rel="stylesheet" href="codebase/dhtmlxscheduler_flat.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
 
 	
 <style type="text/css" media="screen">
